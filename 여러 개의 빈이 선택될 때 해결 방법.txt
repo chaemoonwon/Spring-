@@ -1,0 +1,27 @@
+여러 개의 빈이 선택될 때 해결 방법
+
+
+@Autowired 필드명, @Quilifier, @Primary
+
+
+@Autowired 필드명 매칭
+@Autowired 매칭 정리
+1) 타입 매칭
+2) 타입 매칭의 결과가 2개 이상일 때 필드 명, 파라미터 명으로 빈 이름 매칭
+
+
+@Qualifier 사용
+@Qualifier는 추가 구분자를 붙여주는 방법이다. 
+주입시 추가적인 방법을 제공하는 것이지 빈 이름을 변경하는 것은 아니다.
+
+주입시에 @Qualifier를 붙여주고 등록한 이름을 적어준다.
+
+@Qualifier 정리
+1) @Qualifier끼리 매칭
+2) 빈 이름 매칭
+3) NoSuchBeanDefinitionException 예외 발생
+
+@Primary 사용
+@Primary 는 우선순위를 정하는 방법이다. 
+@Autowired 시에 여러 빈이 매칭되면 @Primary 가 우선권을 가진다.
+
